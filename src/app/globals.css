@@ -29,3 +29,24 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
+.clr-dark {
+  color: var(--bg-color);
+}
+
+.move-up {
+  background-color: #fff;
+}
+.move-up:hover {
+  @apply bg-indigo-100;
+}
+
+@media (min-width: 640px) {
+  .move-up {
+    transform: translateY(2rem);
+    transition: transform 0.3s ease;
+  }
+  .move-up:hover {
+    transform: translateY(0);
+  }
+}
