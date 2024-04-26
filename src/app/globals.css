@@ -22,12 +22,19 @@ body {
   color: white;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
 .container {
   width: 100%;
-  max-width: 1500px;
+  max-width: 900px;
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.container-wide {
+  max-width: 1500px;
 }
 
 .clr-dark {
@@ -49,4 +56,25 @@ body {
   .move-up:hover {
     transform: translateY(0);
   }
+}
+
+.side-decor {
+  position: relative;
+  border-left: 1px solid white;
+  padding: 0 0 4rem 2rem;
+}
+.side-decor::after {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--bg-color);
+  border: 2px solid white;
+  border-radius: 50%;
+  top: 0;
+  left: -0.5rem;
+}
+
+.text-link {
+  @apply text-xl underline underline-offset-2;
 }
