@@ -17,3 +17,11 @@ body {
   color: white;
   background-color: var(--bg-color);
 }
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
