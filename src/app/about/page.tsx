@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (
     <>
       <main className="container">
-        <h2 className={`${fontDisplay} text-6xl py-20`}>Nice to meet you!</h2>
+        <h2 className={`${fontDisplay} text-5xl sm:text-6xl py-20`}>Nice to meet you!</h2>
         <section>
           <div className="side-decor">
             <h3 className={`${fontDisplay} text-3xl pb-5`}>About Me</h3>
