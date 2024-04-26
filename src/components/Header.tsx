@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   return (
-    <header className="container relative flex justify-between py-4">
+    <header className="container container-wide relative flex justify-between py-4">
       {/* Left side of Header */}
       <Link href="/" className="flex items-center gap-4">
         <Image src="/logo.png" alt="go to homepage" width={50} height={50} />
