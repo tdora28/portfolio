@@ -35,10 +35,18 @@ body {
 }
 
 .move-up {
-  transform: translateY(2rem);
-  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+.move-up:hover {
+  @apply bg-indigo-100;
 }
 
-.move-up:hover {
-  transform: translateY(0);
+@media (min-width: 640px) {
+  .move-up {
+    transform: translateY(2rem);
+    transition: transform 0.3s ease;
+  }
+  .move-up:hover {
+    transform: translateY(0);
+  }
 }
