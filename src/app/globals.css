@@ -14,8 +14,12 @@
 }
 
 body {
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   background-color: var(--bg-color);
+  color: white;
 }
 
 .container {
