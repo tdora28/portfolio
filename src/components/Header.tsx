@@ -30,7 +30,7 @@ const Header = () => {
       {/* Left side of Header */}
       <Link href="/" className="flex items-center gap-4">
         <Image src="/logo.png" alt="go to homepage" width={50} height={50} />
-        <p className={`${fontDisplay} text-2xl sm:text-3xl`}>Dora Tokai</p>
+        <span className={`${fontDisplay} text-2xl sm:text-3xl`}>Dora Tokai</span>
       </Link>
 
       {/* Right side of Header */}
