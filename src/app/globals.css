@@ -29,3 +29,16 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
+.clr-dark {
+  color: var(--bg-color);
+}
+
+.move-up {
+  transform: translateY(2rem);
+  transition: transform 0.3s ease;
+}
+
+.move-up:hover {
+  transform: translateY(0);
+}
