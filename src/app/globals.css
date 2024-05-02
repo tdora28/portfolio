@@ -50,18 +50,19 @@ p {
 
 .move-up {
   background-color: #fff;
+  transition: transform 0.3s ease;
 }
 .move-up:hover {
-  @apply bg-indigo-100;
+  transform: translateY(0.3rem);
 }
 
 @media (min-width: 640px) {
   .move-up {
     transform: translateY(2rem);
-    transition: transform 0.3s ease;
   }
   .move-up:hover {
     transform: translateY(0);
+    background-color: #fff;
   }
 }
 
