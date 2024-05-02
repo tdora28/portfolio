@@ -4,6 +4,7 @@
 
 :root {
   --bg-color: #2a1f39;
+  --side-color: #5d5369;
 }
 /* If I want to implement light/dark mode: @media (prefers-color-scheme: dark) {} */
 
@@ -39,6 +40,12 @@ p {
 
 .clr-dark {
   color: var(--bg-color);
+}
+.bg-dark {
+  background-color: var(--bg-color);
+}
+.bg-side {
+  background-color: var(--side-color);
 }
 
 .move-up {
