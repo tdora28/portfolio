@@ -5,4 +5,6 @@ export interface ProjectType {
   description: string;
   liveDemoUrl: string;
   codeUrl: string;
+  labels: string[];
+  longDesc: string[];
 }

@@ -4,7 +4,6 @@ import ProjectCard from '@/components/ProjectCard';
 import projects from '@/projects';
 
 const WorkPage = () => {
-  console.log(projects);
   return (
     <>
       <main className="container">
@@ -14,7 +13,7 @@ const WorkPage = () => {
         {/* imageUrl, title, description, liveDemoUrl, codeUrl */}
         <section className="flex flex-wrap justify-evenly gap-10">
           {projects.map((project) => (
-            <ProjectCard key={project.id} id={project.id} imageUrl={project.imageUrl} title={project.title} description={project.description} liveDemoUrl={project.liveDemoUrl} codeUrl={project.codeUrl} />
+            <ProjectCard key={project.id} {...project} />
           ))}
         </section>
       </main>
