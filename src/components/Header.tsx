@@ -48,7 +48,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/work" className={path === '/work' ? 'underline underline-offset-4' : ''}>
+              <Link href="/projects" className={path === '/projects' ? 'underline underline-offset-4' : ''}>
                 Work
               </Link>
             </li>
@@ -73,7 +73,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/work" className={path === '/work' ? 'underline underline-offset-4' : ''} onClick={toggleMobileNav}>
+              <Link href="/projects" className={path === '/projects' ? 'underline underline-offset-4' : ''} onClick={toggleMobileNav}>
                 Work
               </Link>
             </li>

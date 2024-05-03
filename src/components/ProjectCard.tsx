@@ -7,7 +7,7 @@ import { ProjectType } from '@/types';
 const ProjectCard: React.FC<ProjectType> = (props) => {
   return (
     <div className="max-w-[300px] border-b-2 border-white ">
-      <Link href={`/work/${props.id}`}>
+      <Link href={`/projects/${props.id}`}>
         <Image src={props.imageUrl} alt="Project Image" width={800} height={500} />
       </Link>
       <div className="py-8">

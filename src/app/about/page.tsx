@@ -15,8 +15,8 @@ const AboutPage = () => {
             <p>
               I aim to create work that is not only smart and simple but also distinct and powerful. Whether it's implementing UI design, optimizing backend, or technical problem-solving, I'm dedicated to providing impactful solutions. I prioritize a
               user-first approach, tailoring my work to meet specific project needs. Thank you for exploring my{' '}
-              <Link href="/work" className={`${fontDisplay} text-link`}>
-                portfolio
+              <Link href="/projects" className={`${fontDisplay} text-link`}>
+                projects
               </Link>
               , and feel free to{' '}
               <Link href="/contact" className={`${fontDisplay} text-link`}>

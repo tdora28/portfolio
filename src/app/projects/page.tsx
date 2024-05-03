@@ -3,7 +3,7 @@ import { fontDisplay } from '@/utilities/font';
 import ProjectCard from '@/components/ProjectCard';
 import projects from '@/projects';
 
-const WorkPage = () => {
+const ProjectsPage = () => {
   return (
     <>
       <main className="container">
@@ -24,4 +24,4 @@ const WorkPage = () => {
   );
 };
 
-export default WorkPage;
+export default ProjectsPage;

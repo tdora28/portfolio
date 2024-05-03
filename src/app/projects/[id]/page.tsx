@@ -21,7 +21,7 @@ const ProjectPage = () => {
           <h2 className={`${fontDisplay} text-5xl sm:text-6xl py-20`}>Project not found</h2>
           <p>
             The project you are looking for does not exist. Check out the{' '}
-            <Link href="/work" className={`${fontDisplay} text-link`}>
+            <Link href="/projects" className={`${fontDisplay} text-link`}>
               project showcase
             </Link>
             .
@@ -72,9 +72,9 @@ const ProjectPage = () => {
       </main>
 
       {/* Back button */}
-      <button className={`${fontDisplay} px-4 py-2 bg-white text-xl clr-dark fixed bottom-10 right-5 flex items-center gap-4`}>
+      <Link href="/projects" className={`${fontDisplay} px-4 py-2 bg-white text-xl clr-dark fixed bottom-10 right-5 flex items-center gap-4`}>
         Projects <FaArrowAltCircleRight />
-      </button>
+      </Link>
 
       {/* Decorative text in the background */}
       <div className={`${fontDisplay} fixed top-[50%] translate-y-[-50%] right-[-5vw] z-[-1] text-[30vw] opacity-10`}>Project</div>

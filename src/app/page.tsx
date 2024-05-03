@@ -16,8 +16,8 @@ export default function Home() {
           <Link href="/about" className="grow py-8 bg-white clr-dark move-up bg-dots">
             About
           </Link>
-          <Link href="/work" className="grow py-8 bg-white clr-dark move-up bg-dots">
-            Work
+          <Link href="/projects" className="grow py-8 bg-white clr-dark move-up bg-dots">
+            Projects
           </Link>
           <Link href="/contact" className="grow py-8 bg-white clr-dark move-up bg-dots">
             Contact
