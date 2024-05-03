@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header className="container container-wide relative flex justify-between py-4">
       {/* Left side of Header */}
-      <Link href="/" className="flex items-center gap-4">
+      <Link href="/" className="flex items-center gap-4 scale-up">
         <Image src="/logo.png" alt="go to homepage" width={50} height={50} />
         <span className={`${fontDisplay} text-2xl sm:text-3xl`}>Dora Tokai</span>
       </Link>

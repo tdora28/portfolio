@@ -65,7 +65,6 @@ p {
 .move-up:hover {
   transform: translateY(0.3rem);
 }
-
 @media (min-width: 640px) {
   .move-up {
     transform: translateY(2rem);
@@ -74,6 +73,13 @@ p {
     transform: translateY(0);
     background-color: #fff;
   }
+}
+
+.scale-up {
+  transition: transform 0.3s ease;
+}
+.scale-up:hover {
+  transform: scale(1.1);
 }
 
 /* DECORATIVE ELEMENTS */
