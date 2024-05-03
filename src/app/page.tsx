@@ -12,14 +12,14 @@ export default function Home() {
           Web Dev <span className="block text-6xl sm:text-9xl">Portfolio</span>
         </h1>
         {/* Big nav */}
-        <nav className={`${fontDisplay} grid sm:grid-cols-3 gap-5 sm:gap-10 w-full max-w-[800px] sm:h-[40vh] mt-[15vh] mx-auto text-4xl text-center overflow-hidden`}>
-          <Link href="/about" className="grow py-8 bg-white clr-dark move-up">
+        <nav className={`${fontDisplay} grid sm:grid-cols-3 gap-10 w-full max-w-[800px] sm:h-[40vh] mt-[15vh] mx-auto text-4xl text-center overflow-hidden`}>
+          <Link href="/about" className="grow py-8 bg-white clr-dark move-up bg-dots">
             About
           </Link>
-          <Link href="/work" className="grow py-8 bg-white clr-dark move-up">
+          <Link href="/work" className="grow py-8 bg-white clr-dark move-up bg-dots">
             Work
           </Link>
-          <Link href="/contact" className="grow py-8 bg-white clr-dark move-up">
+          <Link href="/contact" className="grow py-8 bg-white clr-dark move-up bg-dots">
             Contact
           </Link>
         </nav>
