@@ -29,8 +29,23 @@ p {
   margin-bottom: 1rem;
 }
 
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  font-size: 1.25rem;
+  color: var(--bg-color);
+}
+
 .text-link {
-  @apply text-xl underline underline-offset-2;
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  text-decoration-color: white;
+  transition: text-decoration-color 0.2s ease-out;
+}
+.text-link:hover {
+  text-decoration-color: transparent;
 }
 
 /* UTILITIES */
