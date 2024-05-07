@@ -75,14 +75,24 @@ p {
   }
 }
 
-.scale-up {
-  transition: transform 0.3s ease;
+.indent {
+  transition: all 0.2s ease-out;
 }
-.scale-up:hover {
-  transform: scale(1.1);
+.indent:hover {
+  transform: translate(0.2rem, 0.2rem);
 }
 
 /* DECORATIVE ELEMENTS */
+
+.decor-text {
+  position: fixed;
+  top: 10vh;
+  left: 50%;
+  z-index: -1;
+  font-size: 30vw;
+  transform: translateX(-50%);
+  opacity: 0.1;
+}
 
 .bg-dots {
   position: relative;

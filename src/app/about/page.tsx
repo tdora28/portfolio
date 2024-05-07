@@ -11,7 +11,7 @@ const AboutPage = () => {
           {/* Resume */}
           <div className="side-decor">
             <h3 className={`${fontDisplay} text-3xl pb-5`}>Resume</h3>
-            <a href="/cv-dora-tokai.pdf" download="cv-dora-tokai.pdf" className={`${fontDisplay} inline-block px-4 py-2 bg-white text-xl clr-dark scale-up bg-frame`}>
+            <a href="/cv-dora-tokai.pdf" download="cv-dora-tokai.pdf" className={`${fontDisplay} inline-block px-4 py-2 bg-white text-xl clr-dark indent bg-frame`}>
               Download CV
             </a>
           </div>
