@@ -11,8 +11,7 @@ const ProjectsPage = () => {
         <h2 className={`${fontDisplay} text-5xl sm:text-6xl py-20`}>Project showcase</h2>
 
         {/* Project Cards */}
-        {/* imageUrl, title, description, liveDemoUrl, codeUrl */}
-        <section className="flex flex-wrap justify-evenly gap-10">
+        <section className="flex flex-wrap justify-evenly gap-10 pb-10">
           {projects.map((project) => (
             <ProjectCard key={project.id} {...project} />
           ))}

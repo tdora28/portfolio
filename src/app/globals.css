@@ -34,6 +34,13 @@ p {
   background-color: white;
   font-size: 1.25rem;
   color: var(--bg-color);
+  transition: all 0.2s ease-out;
+}
+
+.btn-sm {
+  padding: 0 0.5rem;
+  background-color: white;
+  color: var(--bg-color);
 }
 
 .text-link {
@@ -95,6 +102,24 @@ p {
 }
 .indent:hover {
   transform: translate(0.2rem, 0.2rem);
+}
+
+.elevate {
+  transition: all 0.2s ease-out;
+}
+.elevate:hover {
+  background: white;
+  color: var(--bg-color);
+  transform: scale(1.05);
+}
+.elevate:hover .btn {
+  color: white;
+  background: var(--bg-color);
+}
+.elevate:hover .btn:hover {
+  color: var(--bg-color);
+  background: white;
+  box-shadow: inset 0 0 0 2px var(--bg-color);
 }
 
 /* DECORATIVE ELEMENTS */
