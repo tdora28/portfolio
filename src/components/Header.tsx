@@ -49,7 +49,7 @@ const Header = () => {
             </li>
             <li>
               <Link href="/projects" className={path === '/projects' ? 'underline underline-offset-4' : ''}>
-                Work
+                Projects
               </Link>
             </li>
             <li>
@@ -74,7 +74,7 @@ const Header = () => {
             </li>
             <li>
               <Link href="/projects" className={path === '/projects' ? 'underline underline-offset-4' : ''} onClick={toggleMobileNav}>
-                Work
+                Projects
               </Link>
             </li>
             <li>
