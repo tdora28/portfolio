@@ -7,6 +7,7 @@ import projects from '@/projects';
 import Link from 'next/link';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 import Image from 'next/image';
+import DecorText from '@/components/DecorText';
 
 const ProjectPage = () => {
   const params = useParams();
@@ -21,7 +22,7 @@ const ProjectPage = () => {
           <h2 className={`${fontDisplay} text-5xl sm:text-6xl py-20`}>Project not found</h2>
           <p>
             The project you are looking for does not exist. Check out the{' '}
-            <Link href="/work" className={`${fontDisplay} text-link`}>
+            <Link href="/projects" className={`${fontDisplay} text-link`}>
               project showcase
             </Link>
             .
@@ -29,7 +30,7 @@ const ProjectPage = () => {
         </main>
 
         {/* Decorative text in the background */}
-        <div className={`${fontDisplay} fixed top-[50%] translate-y-[-50%] right-[-5vw] z-[-1] text-[30vw] opacity-10`}>404</div>
+        <DecorText text="404" position="right" />
       </>
     );
   }
@@ -55,10 +56,10 @@ const ProjectPage = () => {
           </div>
           {/* Buttons */}
           <div className={`${fontDisplay} flex gap-4 text-xl w-full md:w-auto`}>
-            <Link href={project.liveDemoUrl} className="bg-white text-black py-2 px-4 grow">
+            <Link href={project.liveDemoUrl} className="grow btn bg-frame indent">
               Live demo
             </Link>
-            <Link href={project.codeUrl} className="bg-white text-black py-2 px-4 grow">
+            <Link href={project.codeUrl} className="grow btn bg-frame indent">
               Code
             </Link>
           </div>
@@ -72,12 +73,12 @@ const ProjectPage = () => {
       </main>
 
       {/* Back button */}
-      <button className={`${fontDisplay} px-4 py-2 bg-white text-xl clr-dark fixed bottom-10 right-5 flex items-center gap-4`}>
+      <Link href="/projects" className={`${fontDisplay} btn fixed bottom-10 right-5 flex items-center gap-4 indent`}>
         Projects <FaArrowAltCircleRight />
-      </button>
+      </Link>
 
       {/* Decorative text in the background */}
-      <div className={`${fontDisplay} fixed top-[50%] translate-y-[-50%] right-[-5vw] z-[-1] text-[30vw] opacity-10`}>Project</div>
+      <DecorText text="Project" position="right" />
     </>
   );
 };

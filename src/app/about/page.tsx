@@ -1,7 +1,7 @@
 import React from 'react';
 import { fontDisplay } from '@/utilities/font';
-import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
+import DecorText from '@/components/DecorText';
 
 const AboutPage = () => {
   return (
@@ -9,14 +9,22 @@ const AboutPage = () => {
       <main className="container">
         <h2 className={`${fontDisplay} text-5xl sm:text-6xl py-20`}>Nice to meet you!</h2>
         <section>
+          {/* Resume */}
+          <div className="side-decor">
+            <h3 className={`${fontDisplay} text-3xl pb-5`}>Resume</h3>
+            <a href="/cv-dora-tokai.pdf" download="cv-dora-tokai.pdf" className={`${fontDisplay} inline-block btn bg-frame indent`}>
+              Download CV
+            </a>
+          </div>
+          {/* About Me */}
           <div className="side-decor">
             <h3 className={`${fontDisplay} text-3xl pb-5`}>About Me</h3>
             <p>I'm Dora Tokai: full-stack web developer that has a passion both for programming and human languages, enjoys problem solving, learning, and tinkering.</p>
             <p>
               I aim to create work that is not only smart and simple but also distinct and powerful. Whether it's implementing UI design, optimizing backend, or technical problem-solving, I'm dedicated to providing impactful solutions. I prioritize a
               user-first approach, tailoring my work to meet specific project needs. Thank you for exploring my{' '}
-              <Link href="/work" className={`${fontDisplay} text-link`}>
-                portfolio
+              <Link href="/projects" className={`${fontDisplay} text-link`}>
+                projects
               </Link>
               , and feel free to{' '}
               <Link href="/contact" className={`${fontDisplay} text-link`}>
@@ -25,7 +33,9 @@ const AboutPage = () => {
               for collaboration or inquiries.
             </p>
           </div>
-          <div className="side-decor">
+
+          {/* Socials will go to Contact */}
+          {/* <div className="side-decor">
             <h3 className={`${fontDisplay} text-3xl pb-5`}>Social</h3>
             <div className="flex flex-col gap-4 w-full max-w-max">
               <Link href="https://www.linkedin.com/in/doratokai28/" className="flex items-center border-white border-2">
@@ -37,7 +47,9 @@ const AboutPage = () => {
                 <span className="w-full px-4 text-center">github.com/tdora28/</span>
               </Link>
             </div>
-          </div>
+          </div> */}
+
+          {/* Experience */}
           <div className="side-decor">
             <h3 className={`${fontDisplay} text-3xl pb-5`}>Experience</h3>
             <p className="flex flex-col">
@@ -59,15 +71,11 @@ const AboutPage = () => {
               </span>
             </p>
           </div>
-          <div className="side-decor">
-            <h3 className={`${fontDisplay} text-3xl pb-5`}>Resume</h3>
-            <button className={`${fontDisplay} px-4 py-2 bg-white text-xl clr-dark`}>Download CV</button>
-          </div>
         </section>
       </main>
 
       {/* Decorative text in the background */}
-      <div className={`${fontDisplay} fixed top-[50%] translate-y-[-50%] right-[-5vw] z-[-1] text-[30vw] opacity-10`}>About</div>
+      <DecorText text="About" position="right" />
     </>
   );
 };

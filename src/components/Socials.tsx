@@ -5,10 +5,10 @@ import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 const Socials = () => {
   return (
     <div className="flex gap-4 text-2xl">
-      <Link href="https://www.linkedin.com/in/doratokai28/">
+      <Link href="https://www.linkedin.com/in/doratokai28/" className="indent">
         <FaLinkedinIn />
       </Link>
-      <Link href="https://github.com/tdora28/">
+      <Link href="https://github.com/tdora28/" className="indent">
         <FaGithub />
       </Link>
     </div>

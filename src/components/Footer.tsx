@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Socials from './Socials';
 import { usePathname } from 'next/navigation';
 
 const Footer = () => {
@@ -11,7 +12,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className={path === '/' ? 'hidden' : 'container py-5 text-center'}>
+    <footer className={path === '/' ? 'hidden' : 'container flex flex-col items-center gap-2 py-5 text-center'}>
+      <Socials />
       <small>&copy; {getCurrentYear()} TDora28. All rights reserved.</small>
     </footer>
   );

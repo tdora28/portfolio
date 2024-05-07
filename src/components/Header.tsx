@@ -28,9 +28,9 @@ const Header = () => {
   return (
     <header className="container container-wide relative flex justify-between py-4">
       {/* Left side of Header */}
-      <Link href="/" className="flex items-center gap-4">
+      <Link href="/" className="flex items-center gap-4 indent">
         <Image src="/logo.png" alt="go to homepage" width={50} height={50} />
-        <span className={`${fontDisplay} text-2xl sm:text-3xl`}>Dora Tokai</span>
+        <span className={`${fontDisplay} text-xl sm:text-3xl`}>Dora Tokai</span>
       </Link>
 
       {/* Right side of Header */}
@@ -43,17 +43,17 @@ const Header = () => {
         <nav className={path === '/' ? 'hidden' : 'hidden sm:block'}>
           <ul className="flex gap-4 uppercase">
             <li>
-              <Link href="/about" className={path === '/about' ? 'underline underline-offset-4' : ''}>
+              <Link href="/about" className={path === '/about' ? 'nav-link-active' : 'block indent'}>
                 About
               </Link>
             </li>
             <li>
-              <Link href="/work" className={path === '/work' ? 'underline underline-offset-4' : ''}>
-                Work
+              <Link href="/projects" className={path === '/projects' ? 'nav-link-active' : 'block indent'}>
+                Projects
               </Link>
             </li>
             <li>
-              <Link href="/contact" className={path === '/contact' ? 'underline underline-offset-4' : ''}>
+              <Link href="/contact" className={path === '/contact' ? 'nav-link-active' : 'block indent'}>
                 Contact
               </Link>
             </li>
@@ -68,17 +68,17 @@ const Header = () => {
         <nav className={path === '/' ? 'hidden' : setMobileNavClass()}>
           <ul className="flex flex-col gap-4 text-right uppercase">
             <li>
-              <Link href="/about" className={path === '/about' ? 'underline underline-offset-4' : ''} onClick={toggleMobileNav}>
+              <Link href="/about" className={path === '/about' ? 'nav-link-active' : ''} onClick={toggleMobileNav}>
                 About
               </Link>
             </li>
             <li>
-              <Link href="/work" className={path === '/work' ? 'underline underline-offset-4' : ''} onClick={toggleMobileNav}>
-                Work
+              <Link href="/projects" className={path === '/projects' ? 'nav-link-active' : ''} onClick={toggleMobileNav}>
+                Projects
               </Link>
             </li>
             <li>
-              <Link href="/contact" className={path === '/contact' ? 'underline underline-offset-4' : ''} onClick={toggleMobileNav}>
+              <Link href="/contact" className={path === '/contact' ? 'nav-link-active' : ''} onClick={toggleMobileNav}>
                 Contact
               </Link>
             </li>

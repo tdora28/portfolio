@@ -8,6 +8,8 @@
 }
 /* If I want to implement light/dark mode: @media (prefers-color-scheme: dark) {} */
 
+/* ELEMENTS */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,6 +28,35 @@ body {
 p {
   margin-bottom: 1rem;
 }
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  font-size: 1.25rem;
+  color: var(--bg-color);
+  border: 1px solid var(--bg-color);
+  transition: all 0.2s ease-out;
+}
+
+.btn-sm {
+  padding: 0 0.5rem;
+  background-color: white;
+  color: var(--bg-color);
+}
+
+.text-link {
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  text-decoration-color: white;
+  transition: text-decoration-color 0.2s ease-out;
+}
+.text-link:hover {
+  text-decoration-color: transparent;
+}
+
+/* UTILITIES */
 
 .container {
   width: 100%;
@@ -48,21 +79,107 @@ p {
   background-color: var(--side-color);
 }
 
+/* ANIMATIONS */
+
 .move-up {
   background-color: #fff;
+  transition: transform 0.3s ease;
 }
 .move-up:hover {
-  @apply bg-indigo-100;
+  transform: translateY(0.3rem);
 }
-
 @media (min-width: 640px) {
   .move-up {
     transform: translateY(2rem);
-    transition: transform 0.3s ease;
   }
   .move-up:hover {
     transform: translateY(0);
+    background-color: #fff;
   }
+}
+
+.indent {
+  transition: all 0.2s ease-out;
+}
+.indent:hover {
+  transform: translate(0.2rem, 0.2rem);
+}
+
+.elevate {
+  transition: all 0.2s ease-out;
+}
+.elevate:hover {
+  background: white;
+  color: var(--bg-color);
+  transform: scale(1.05);
+}
+.elevate:hover .btn {
+  color: white;
+  background: var(--bg-color);
+}
+.elevate:hover .btn:hover {
+  color: var(--bg-color);
+  background: white;
+  box-shadow: inset 0 0 0 1px var(--bg-color);
+}
+
+/* DECORATIVE ELEMENTS */
+
+.decor-text {
+  position: fixed;
+  z-index: -1;
+  font-size: 30vw;
+  color: var(--side-color);
+  opacity: 0.3;
+}
+.decor-text-center {
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.decor-text-right {
+  top: 50%;
+  right: -5vw;
+  transform: translateY(-50%);
+}
+
+.nav-link-active {
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  pointer-events: none;
+}
+
+.bg-dots {
+  position: relative;
+  margin-right: 1rem;
+}
+.bg-dots::after {
+  content: '';
+  position: absolute;
+  top: 0.8rem;
+  right: -1rem;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  background-image: url('/dots.png');
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+.bg-frame {
+  position: relative;
+  margin-right: 1rem;
+}
+.bg-frame::after {
+  content: '';
+  position: absolute;
+  top: 0.4rem;
+  right: -0.4rem;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
 }
 
 .side-decor {
@@ -80,8 +197,4 @@ p {
   border-radius: 50%;
   top: 0;
   left: -0.5rem;
-}
-
-.text-link {
-  @apply text-xl underline underline-offset-2;
 }
