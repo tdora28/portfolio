@@ -56,10 +56,10 @@ const ProjectPage = () => {
           </div>
           {/* Buttons */}
           <div className={`${fontDisplay} flex gap-4 text-xl w-full md:w-auto`}>
-            <Link href={project.liveDemoUrl} className="bg-white text-black py-2 px-4 grow">
+            <Link href={project.liveDemoUrl} className="grow btn bg-frame indent">
               Live demo
             </Link>
-            <Link href={project.codeUrl} className="bg-white text-black py-2 px-4 grow">
+            <Link href={project.codeUrl} className="grow btn bg-frame indent">
               Code
             </Link>
           </div>
@@ -73,7 +73,7 @@ const ProjectPage = () => {
       </main>
 
       {/* Back button */}
-      <Link href="/projects" className={`${fontDisplay} px-4 py-2 bg-white text-xl clr-dark fixed bottom-10 right-5 flex items-center gap-4`}>
+      <Link href="/projects" className={`${fontDisplay} btn fixed bottom-10 right-5 flex items-center gap-4 indent`}>
         Projects <FaArrowAltCircleRight />
       </Link>
 
