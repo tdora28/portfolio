@@ -30,7 +30,7 @@ const ProjectPage = () => {
         </main>
 
         {/* Decorative text in the background */}
-        <div className={`${fontDisplay} fixed top-[50%] translate-y-[-50%] right-[-5vw] z-[-1] text-[30vw] opacity-10`}>404</div>
+        <DecorText text="404" position="right" />
       </>
     );
   }
