@@ -56,6 +56,36 @@ p {
   text-decoration-color: transparent;
 }
 
+.form-group {
+  position: relative;
+}
+.form-group input {
+  padding: 1.5rem 1rem 0.5rem;
+  border: 1px solid white;
+  background: var(--bg-color);
+  color: white;
+  outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  box-shadow: 0.2rem 0.2rem 0 0 white;
+}
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  color: white;
+  transform: translateY(-50%);
+}
+.form-group input.filling + label {
+  font-size: 0.75rem;
+  top: 0;
+  color: #d8d8d8;
+  transform: translateY(0.5rem);
+}
+
 /* UTILITIES */
 
 .container {
