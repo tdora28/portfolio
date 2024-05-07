@@ -27,7 +27,7 @@ export default function Home() {
       </main>
 
       {/* Decorative text in the background */}
-      <DecorText text="Portfolio" />
+      <DecorText text="Portfolio" position="center" />
     </>
   );
 }

@@ -7,6 +7,7 @@ import projects from '@/projects';
 import Link from 'next/link';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 import Image from 'next/image';
+import DecorText from '@/components/DecorText';
 
 const ProjectPage = () => {
   const params = useParams();
@@ -77,7 +78,7 @@ const ProjectPage = () => {
       </Link>
 
       {/* Decorative text in the background */}
-      <div className={`${fontDisplay} fixed top-[50%] translate-y-[-50%] right-[-5vw] z-[-1] text-[30vw] opacity-10`}>Project</div>
+      <DecorText text="Project" position="right" />
     </>
   );
 };

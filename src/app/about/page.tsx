@@ -1,6 +1,7 @@
 import React from 'react';
 import { fontDisplay } from '@/utilities/font';
 import Link from 'next/link';
+import DecorText from '@/components/DecorText';
 
 const AboutPage = () => {
   return (
@@ -74,7 +75,7 @@ const AboutPage = () => {
       </main>
 
       {/* Decorative text in the background */}
-      <div className={`${fontDisplay} fixed top-[50%] translate-y-[-50%] right-[-5vw] z-[-1] text-[30vw] opacity-10`}>About</div>
+      <DecorText text="About" position="right" />
     </>
   );
 };

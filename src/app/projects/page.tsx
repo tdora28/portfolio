@@ -2,6 +2,7 @@ import React from 'react';
 import { fontDisplay } from '@/utilities/font';
 import ProjectCard from '@/components/ProjectCard';
 import projects from '@/projects';
+import DecorText from '@/components/DecorText';
 
 const ProjectsPage = () => {
   return (
@@ -19,7 +20,7 @@ const ProjectsPage = () => {
       </main>
 
       {/* Decorative text in the background */}
-      <div className={`${fontDisplay} fixed top-[50%] translate-y-[-50%] right-[-5vw] z-[-1] text-[30vw] opacity-10`}>Work</div>
+      <DecorText text="Projects" position="right" />
     </>
   );
 };
