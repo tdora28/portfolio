@@ -102,6 +102,13 @@ p {
   transform: translateY(-50%);
 }
 
+.nav-link-active {
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  cursor: default;
+  pointer-events: none;
+}
+
 .bg-dots {
   position: relative;
   margin-right: 1rem;

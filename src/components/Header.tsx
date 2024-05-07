@@ -43,17 +43,17 @@ const Header = () => {
         <nav className={path === '/' ? 'hidden' : 'hidden sm:block'}>
           <ul className="flex gap-4 uppercase">
             <li>
-              <Link href="/about" className={path === '/about' ? 'underline underline-offset-4' : ''}>
+              <Link href="/about" className={path === '/about' ? 'nav-link-active' : 'block indent'}>
                 About
               </Link>
             </li>
             <li>
-              <Link href="/projects" className={path === '/projects' ? 'underline underline-offset-4' : ''}>
+              <Link href="/projects" className={path === '/projects' ? 'nav-link-active' : 'block indent'}>
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/contact" className={path === '/contact' ? 'underline underline-offset-4' : ''}>
+              <Link href="/contact" className={path === '/contact' ? 'nav-link-active' : 'block indent'}>
                 Contact
               </Link>
             </li>
@@ -68,17 +68,17 @@ const Header = () => {
         <nav className={path === '/' ? 'hidden' : setMobileNavClass()}>
           <ul className="flex flex-col gap-4 text-right uppercase">
             <li>
-              <Link href="/about" className={path === '/about' ? 'underline underline-offset-4' : ''} onClick={toggleMobileNav}>
+              <Link href="/about" className={path === '/about' ? 'nav-link-active' : ''} onClick={toggleMobileNav}>
                 About
               </Link>
             </li>
             <li>
-              <Link href="/projects" className={path === '/projects' ? 'underline underline-offset-4' : ''} onClick={toggleMobileNav}>
+              <Link href="/projects" className={path === '/projects' ? 'nav-link-active' : ''} onClick={toggleMobileNav}>
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/contact" className={path === '/contact' ? 'underline underline-offset-4' : ''} onClick={toggleMobileNav}>
+              <Link href="/contact" className={path === '/contact' ? 'nav-link-active' : ''} onClick={toggleMobileNav}>
                 Contact
               </Link>
             </li>
