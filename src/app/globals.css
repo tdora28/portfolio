@@ -58,19 +58,26 @@ p {
 
 .form-group {
   position: relative;
+  width: 100%;
 }
-.form-group input {
+.form-group input,
+.form-group textarea {
+  width: 100%;
   padding: 1.5rem 1rem 0.5rem;
   border: 1px solid white;
   background: var(--bg-color);
   color: white;
   outline: none;
 }
+.form-group textarea {
+  height: 200px;
+}
 .form-group input:focus,
 .form-group textarea:focus {
   box-shadow: 0.2rem 0.2rem 0 0 white;
 }
-.form-group label {
+.form-group label,
+.form-group textarea + label {
   position: absolute;
   top: 50%;
   left: 1rem;
@@ -79,7 +86,11 @@ p {
   color: white;
   transform: translateY(-50%);
 }
-.form-group input.filling + label {
+.form-group textarea + label {
+  top: 2rem;
+}
+.form-group input.filling + label,
+.form-group textarea.filling + label {
   font-size: 0.75rem;
   top: 0;
   color: #d8d8d8;

@@ -2,11 +2,12 @@
 
 import React, { useState, FocusEvent, ChangeEvent } from 'react';
 
-interface FloatingLabelInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface FloatingLabelInputProps extends React.InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
   label: string;
+  elementType: 'input' | 'textarea';
 }
 
-const FloatingLabelInput: React.FC<FloatingLabelInputProps> = ({ label, ...inputProps }) => {
+const FloatingLabelInput: React.FC<FloatingLabelInputProps> = ({ label, elementType, ...inputProps }) => {
   const [focused, setFocused] = useState(false);
   const [filled, setFilled] = useState(false);
 
@@ -14,7 +15,7 @@ const FloatingLabelInput: React.FC<FloatingLabelInputProps> = ({ label, ...input
     setFocused(true);
   };
 
-  const handleBlur = (event: FocusEvent<HTMLInputElement>) => {
+  const handleBlur = (event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (event.target.value === '') {
       setFocused(false);
       setFilled(false);
@@ -24,7 +25,7 @@ const FloatingLabelInput: React.FC<FloatingLabelInputProps> = ({ label, ...input
     }
   };
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (event.target.value) {
       setFilled(true);
       setFocused(true);
@@ -34,9 +35,11 @@ const FloatingLabelInput: React.FC<FloatingLabelInputProps> = ({ label, ...input
     }
   };
 
+  const InputComponent = elementType === 'input' ? 'input' : 'textarea';
+
   return (
     <div className="form-group">
-      <input {...inputProps} onFocus={handleFocus} onBlur={handleBlur} onChange={handleChange} className={focused || filled ? 'filling' : ''} required />
+      <InputComponent {...inputProps} onFocus={handleFocus} onBlur={handleBlur} onChange={handleChange} className={focused || filled ? 'filling' : ''} required />
       <label>{label}</label>
     </div>
   );

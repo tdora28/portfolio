@@ -10,10 +10,26 @@ const ContactPage = () => {
     <>
       <main className="container">
         <h2 className={`${fontDisplay} text-5xl sm:text-6xl py-20`}>Contact</h2>
-        <section>
+        <section className="grid grid-cols-[2fr_1fr] gap-10 justify-between">
+          {/* Contact Form */}
+          <form action="" className="flex flex-col gap-5">
+            <h3 className={`${fontDisplay} text-3xl`}>Contact Form</h3>
+
+            {/* Name input */}
+            <FloatingLabelInput label="Name" elementType="input" type="text" name="name" id="name" />
+            {/* Email input */}
+            <FloatingLabelInput label="Email" elementType="input" type="email" name="email" id="email" />
+            {/* Message area */}
+            <FloatingLabelInput label="Message" elementType="textarea" name="message" id="message" required />
+
+            <button type="submit" className={`${fontDisplay} btn bg-frame indent`}>
+              Send
+            </button>
+          </form>
+
           {/* Socials */}
           <div>
-            <h3 className={`${fontDisplay} text-3xl pb-5`}>Social</h3>
+            <h3 className={`${fontDisplay} text-3xl mb-5`}>Social</h3>
             <div className="flex flex-col gap-4 w-full max-w-max">
               <Link href="https://www.linkedin.com/in/doratokai28/" className="flex items-center border-white border-2">
                 <FaLinkedinIn className="p-2 bg-white text-5xl clr-dark" />
@@ -25,25 +41,6 @@ const ContactPage = () => {
               </Link>
             </div>
           </div>
-
-          {/* Contact Form */}
-          <form action="" className="flex flex-col gap-5">
-            <h3 className={`${fontDisplay} text-3xl pb-5`}>Contact Form</h3>
-
-            {/* Name input */}
-            <FloatingLabelInput label="Name" type="text" name="name" id="name" />
-            {/* Email input */}
-            <FloatingLabelInput label="Email" type="email" name="email" id="email" />
-            {/* Message area */}
-            <div className="form-group">
-              <textarea name="message" id="message" rows={5} className="w-full" required />
-              <label htmlFor="message">Message</label>
-            </div>
-
-            <button type="submit" className={`${fontDisplay} btn bg-frame indent`}>
-              Send
-            </button>
-          </form>
         </section>
       </main>
 
