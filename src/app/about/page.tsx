@@ -19,7 +19,7 @@ const AboutPage = () => {
           {/* About Me */}
           <div className="side-decor">
             <h3 className={`${fontDisplay} text-3xl pb-5`}>About Me</h3>
-            <p>I'm Dora Tokai: full-stack web developer that has a passion both for programming and human languages, enjoys problem solving, learning, and tinkering.</p>
+            <p>I'm Dora Tokai: full-stack web developer based in Espoo, Finland that has a passion both for programming and human languages, enjoys problem solving, learning, and tinkering.</p>
             <p>
               I aim to create work that is not only smart and simple but also distinct and powerful. Whether it's implementing UI design, optimizing backend, or technical problem-solving, I'm dedicated to providing impactful solutions. I prioritize a
               user-first approach, tailoring my work to meet specific project needs. Thank you for exploring my{' '}
@@ -33,22 +33,18 @@ const AboutPage = () => {
               for collaboration or inquiries.
             </p>
           </div>
-
-          {/* Socials will go to Contact */}
-          {/* <div className="side-decor">
-            <h3 className={`${fontDisplay} text-3xl pb-5`}>Social</h3>
-            <div className="flex flex-col gap-4 w-full max-w-max">
-              <Link href="https://www.linkedin.com/in/doratokai28/" className="flex items-center border-white border-2">
-                <FaLinkedinIn className="p-2 bg-white text-5xl clr-dark" />
-                <span className="w-full px-4 text-center">linkedin.com/in/doratokai28/</span>
-              </Link>
-              <Link href="https://github.com/tdora28/" className="flex items-center border-white border-2">
-                <FaGithub className="p-2 bg-white text-5xl clr-dark" />
-                <span className="w-full px-4 text-center">github.com/tdora28/</span>
-              </Link>
-            </div>
-          </div> */}
-
+          {/* Skills */}
+          <div className="side-decor">
+            <h3 className={`${fontDisplay} text-3xl pb-5`}>Skills</h3>
+            <p className="flex flex-col">
+              <span>Frontend:</span>
+              <span>HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Bootstrap</span>
+            </p>
+            <p className="flex flex-col">
+              <span>Backend:</span>
+              <span>Node.js, Express, Firebase, MongoDB, MySQL, RESTful APIs</span>
+            </p>
+          </div>
           {/* Experience */}
           <div className="side-decor">
             <h3 className={`${fontDisplay} text-3xl pb-5`}>Experience</h3>
