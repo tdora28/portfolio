@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   return (
-    <header className="container container-wide relative flex justify-between py-4">
+    <header className="container container-wide fixed top-0 left-0 z-10 flex justify-between py-4 bg-dark">
       {/* Left side of Header */}
       <Link href="/" className="flex items-center gap-4 indent">
         <Image src="/logo.png" alt="go to homepage" width={50} height={50} />
@@ -67,6 +67,11 @@ const Header = () => {
         </button>
         <nav className={path === '/' ? 'hidden' : setMobileNavClass()}>
           <ul className="flex flex-col gap-4 text-right uppercase">
+            <li>
+              <Link href="/" className={path === '/' ? 'nav-link-active' : ''} onClick={toggleMobileNav}>
+                Home
+              </Link>
+            </li>
             <li>
               <Link href="/about" className={path === '/about' ? 'nav-link-active' : ''} onClick={toggleMobileNav}>
                 About
