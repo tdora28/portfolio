@@ -45,7 +45,7 @@ const ContactPage = () => {
       </main>
 
       {/* Decorative text in the background */}
-      <DecorText text="Contact" position="right" />
+      <DecorText text="Contact" />
     </>
   );
 };

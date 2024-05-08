@@ -30,7 +30,7 @@ const ProjectPage = () => {
         </main>
 
         {/* Decorative text in the background */}
-        <DecorText text="404" position="right" />
+        <DecorText text="404" />
       </>
     );
   }
@@ -78,7 +78,7 @@ const ProjectPage = () => {
       </Link>
 
       {/* Decorative text in the background */}
-      <DecorText text="Project" position="right" />
+      <DecorText text="Project" />
     </>
   );
 };

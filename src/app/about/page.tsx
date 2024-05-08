@@ -75,7 +75,7 @@ const AboutPage = () => {
       </main>
 
       {/* Decorative text in the background */}
-      <DecorText text="About" position="right" />
+      <DecorText text="About" />
     </>
   );
 };

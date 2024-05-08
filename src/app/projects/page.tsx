@@ -19,7 +19,7 @@ const ProjectsPage = () => {
       </main>
 
       {/* Decorative text in the background */}
-      <DecorText text="Projects" position="right" />
+      <DecorText text="Projects" />
     </>
   );
 };

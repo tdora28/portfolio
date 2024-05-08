@@ -168,20 +168,13 @@ p {
 
 .decor-text {
   position: fixed;
+  top: 10vh;
+  left: 50%;
   z-index: -1;
   font-size: 30vw;
   color: var(--side-color);
-  opacity: 0.3;
-}
-.decor-text-center {
-  top: 10vh;
-  left: 50%;
   transform: translateX(-50%);
-}
-.decor-text-right {
-  top: 50%;
-  right: -5vw;
-  transform: translateY(-50%);
+  opacity: 0.3;
 }
 
 .nav-link-active {
