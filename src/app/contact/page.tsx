@@ -1,9 +1,12 @@
+'use client';
+
 import React from 'react';
 import { fontDisplay } from '@/utilities/font';
 import Link from 'next/link';
 import DecorText from '@/components/DecorText';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import FloatingLabelInput from '@/components/FloatingLabelInput';
+import { handleAccordion } from '@/utilities/helper';
 
 const ContactPage = () => {
   return (
@@ -41,6 +44,18 @@ const ContactPage = () => {
               </Link>
             </div>
           </div>
+        </section>
+
+        <section className="pt-10">
+          <div className="accordion">
+            <p>
+              Your privacy is important to us. Any information you provide through this contact form will be used solely for the purpose of addressing your inquiry or request. Your data will not be shared with third parties without your explicit
+              consent. While every effort is made to protect your information, please be aware that internet transmissions may not be completely secure.
+            </p>
+          </div>
+          <button className={`${fontDisplay} btn-sm block ml-auto mb-4 indent accordion-btn`} onClick={handleAccordion}>
+            Open disclaimer ▼
+          </button>
         </section>
       </main>
 

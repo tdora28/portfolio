@@ -164,6 +164,14 @@ p {
   box-shadow: inset 0 0 0 1px var(--bg-color);
 }
 
+.accordion {
+  display: none;
+  overflow: hidden;
+}
+.accordion.open {
+  display: block;
+}
+
 /* DECORATIVE ELEMENTS */
 
 .decor-text {
