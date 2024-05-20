@@ -15,13 +15,13 @@ export default function Home() {
         </h1>
         {/* Big nav */}
         <nav className={`${fontDisplay} grid sm:grid-cols-3 gap-10 w-full max-w-[800px] sm:h-[40vh] mt-10 sm:mt-[15vh] mx-auto pb-10 sm:pb-0 text-4xl text-center overflow-hidden`}>
-          <Link href="/about" className="py-8 bg-white clr-dark move-up bg-dots">
+          <Link href="/about" className="py-8 clr-bg move-up bg-dots">
             About
           </Link>
-          <Link href="/projects" className="py-8 bg-white clr-dark move-up bg-dots">
+          <Link href="/projects" className="py-8 clr-bg move-up bg-dots">
             Projects
           </Link>
-          <Link href="/contact" className="py-8 bg-white clr-dark move-up bg-dots">
+          <Link href="/contact" className="py-8 clr-bg move-up bg-dots">
             Contact
           </Link>
         </nav>

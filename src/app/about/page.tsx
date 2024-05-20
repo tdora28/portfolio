@@ -9,17 +9,17 @@ const AboutPage = () => {
       <main className="container">
         <ul className="flex flex-col sm:flex-row sm:justify-between gap-5 sm:max-w-max text-center my-10 py-2 uppercase">
           <li>
-            <Link href="#skills" className="bg-side px-5 py-2 indent block">
+            <Link href="#skills" className="bg-side text-white px-5 py-2 indent block">
               Skills
             </Link>
           </li>
           <li>
-            <Link href="#experience" className="bg-side px-5 py-2 indent block">
+            <Link href="#experience" className="bg-side text-white px-5 py-2 indent block">
               Experience
             </Link>
           </li>
           <li>
-            <Link href="#resume" className="bg-side px-5 py-2 indent block">
+            <Link href="#resume" className="bg-side text-white px-5 py-2 indent block">
               Resume
             </Link>
           </li>

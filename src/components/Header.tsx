@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { fontDisplay } from '@/utilities/font';
 import Link from 'next/link';
-import { VscColorMode, VscChromeClose, VscMenu } from 'react-icons/vsc';
+import { VscChromeClose, VscMenu } from 'react-icons/vsc';
 import Socials from './Socials';
 import { usePathname } from 'next/navigation';
 
@@ -40,7 +40,7 @@ const Header = () => {
   };
 
   return (
-    <header className="container container-wide fixed top-0 left-0 z-10 flex justify-between py-4 bg-dark">
+    <header className="fixed top-0 left-0 right-0 z-10 flex justify-between px-10 py-4">
       {/* Left side of Header */}
       <Link href="/" className="flex items-center gap-4 indent">
         <Image src="/logo.png" alt="go to homepage" width={50} height={50} />
@@ -74,7 +74,7 @@ const Header = () => {
           </ul>
         </nav>
         {/* Color mode toggle */}
-        <VscColorMode className="text-2xl" />
+        {/* <VscColorMode className="text-2xl" /> */}
         {/* Mobile menu */}
         <button onClick={toggleMobileNav}>{isMobileNavOpen ? <VscChromeClose className={path === '/' ? 'hidden' : 'sm:hidden text-2xl'} /> : <VscMenu className={path === '/' ? 'hidden' : 'sm:hidden text-2xl'} />}</button>
         <nav ref={navRef} className={path === '/' ? 'hidden' : setMobileNavClass()}>

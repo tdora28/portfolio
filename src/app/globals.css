@@ -4,13 +4,27 @@
 
 :root {
   /* COLORS */
-  --bg-color: #2a1f39;
+  --bg-color: #f9f9f9;
+  --secondary-color: #2a1f39;
   --side-color: #5d5369;
 
   /* LAYOUT */
   --nav-height: 5rem;
+
+  /* DECOR */
+  --dots-img: url('/dots-dark.png');
 }
-/* If I want to implement light/dark mode: @media (prefers-color-scheme: dark) {} */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* COLORS */
+    --bg-color: #2a1f39;
+    --secondary-color: #f9f9f9;
+
+    /* DECOR */
+    --dots-img: url('/dots-light.png');
+  }
+}
 
 /* ELEMENTS */
 
@@ -28,7 +42,7 @@ body {
   /* Give space to the sticky nav */
   padding-top: var(--nav-height);
   background-color: var(--bg-color);
-  color: white;
+  color: var(--secondary-color);
 }
 
 p {
@@ -37,7 +51,7 @@ p {
 
 .btn {
   padding: 0.5rem 1rem;
-  background-color: white;
+  background-color: var(--secondary-color);
   font-size: 1.25rem;
   color: var(--bg-color);
   border: 1px solid var(--bg-color);
@@ -46,7 +60,20 @@ p {
 
 .btn-sm {
   padding: 0 0.5rem;
-  background-color: white;
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--bg-color);
+}
+.btn-social svg {
+  padding: 0.5rem;
+  background-color: var(--secondary-color);
+  font-size: 3rem;
   color: var(--bg-color);
 }
 
@@ -55,7 +82,7 @@ p {
   font-size: 1.3rem;
   text-decoration: underline;
   text-underline-offset: 0.2rem;
-  text-decoration-color: white;
+  text-decoration-color: var(--secondary-color);
   transition: text-decoration-color 0.2s ease-out;
 }
 .text-link:hover {
@@ -70,9 +97,9 @@ p {
 .form-group textarea {
   width: 100%;
   padding: 1.5rem 1rem 0.5rem;
-  border: 1px solid white;
+  border: 1px solid var(--secondary-color);
   background: var(--bg-color);
-  color: white;
+  color: var(--secondary-color);
   outline: none;
 }
 .form-group textarea {
@@ -80,7 +107,7 @@ p {
 }
 .form-group input:focus,
 .form-group textarea:focus {
-  box-shadow: 0.2rem 0.2rem 0 0 white;
+  box-shadow: 0.2rem 0.2rem 0 0 var(--secondary-color);
 }
 .form-group label,
 .form-group textarea + label {
@@ -89,7 +116,7 @@ p {
   left: 1rem;
   transition: all 0.2s ease-in-out;
   pointer-events: none;
-  color: white;
+  color: var(--secondary-color);
   transform: translateY(-50%);
 }
 .form-group textarea + label {
@@ -99,7 +126,7 @@ p {
 .form-group textarea.filling + label {
   font-size: 0.75rem;
   top: 0;
-  color: #d8d8d8;
+  color: var(--secondary-color);
   transform: translateY(0.5rem);
 }
 
@@ -112,19 +139,19 @@ p {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.container-wide {
-  max-width: 1500px;
-}
 
 .scroll-top {
   scroll-margin-top: calc(var(--nav-height) + 1.5rem);
 }
 
-.clr-dark {
+.clr-bg {
   color: var(--bg-color);
 }
-.bg-dark {
+.bg-bg {
   background-color: var(--bg-color);
+}
+.clr-sec {
+  color: var(--secondary-color);
 }
 .bg-side {
   background-color: var(--side-color);
@@ -133,7 +160,7 @@ p {
 /* ANIMATIONS */
 
 .move-up {
-  background-color: #fff;
+  background-color: var(--secondary-color);
   transition: transform 0.3s ease;
 }
 .move-up:hover {
@@ -145,7 +172,7 @@ p {
   }
   .move-up:hover {
     transform: translateY(0);
-    background-color: #fff;
+    background-color: var(--secondary-color);
   }
 }
 
@@ -160,17 +187,17 @@ p {
   transition: all 0.2s ease-out;
 }
 .elevate:hover {
-  background: white;
+  background: var(--secondary-color);
   color: var(--bg-color);
   transform: scale(1.05);
 }
 .elevate:hover .btn {
-  color: white;
+  color: var(--secondary-color);
   background: var(--bg-color);
 }
 .elevate:hover .btn:hover {
   color: var(--bg-color);
-  background: white;
+  background: var(--secondary-color);
   box-shadow: inset 0 0 0 1px var(--bg-color);
 }
 
@@ -203,7 +230,9 @@ p {
 
 .bg-dots {
   position: relative;
+  z-index: 10;
   margin-right: 1rem;
+  background-color: var(--secondary-color);
 }
 .bg-dots::after {
   content: '';
@@ -213,8 +242,8 @@ p {
   z-index: -1;
   width: 100%;
   height: 100%;
-  border: 2px solid white;
-  background-image: url('/dots.png');
+  border: 2px solid var(--secondary-color);
+  background-image: var(--dots-img);
   background-repeat: repeat;
   background-size: auto;
 }
@@ -231,12 +260,12 @@ p {
   z-index: -1;
   width: 100%;
   height: 100%;
-  border: 2px solid white;
+  border: 2px solid var(--secondary-color);
 }
 
 .side-decor {
   position: relative;
-  border-left: 1px solid white;
+  border-left: 1px solid var(--secondary-color);
   padding: 0 0 4rem 2rem;
 }
 .side-decor::after {
@@ -245,7 +274,7 @@ p {
   width: 1rem;
   height: 1rem;
   background-color: var(--bg-color);
-  border: 2px solid white;
+  border: 2px solid var(--secondary-color);
   border-radius: 50%;
   top: 0;
   left: -0.5rem;

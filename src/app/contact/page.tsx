@@ -31,15 +31,15 @@ const ContactPage = () => {
           </form>
 
           {/* Socials */}
-          <div className="md:pl-10 md:border-l-2 border-white">
+          <div className="md:pl-10">
             <h3 className={`${fontDisplay} text-3xl mb-5`}>Socials</h3>
             <div className="flex flex-col gap-4 w-full">
-              <Link href="https://www.linkedin.com/in/doratokai28/" className="flex items-center border-white border bg-dark indent">
-                <FaLinkedinIn className="p-2 bg-white text-5xl clr-dark" />
+              <Link href="https://www.linkedin.com/in/doratokai28/" className="btn-social indent">
+                <FaLinkedinIn />
                 <span className="w-full px-4 text-center">LinkedIn</span>
               </Link>
-              <Link href="https://github.com/tdora28/" className="flex items-center border-white border bg-dark indent">
-                <FaGithub className="p-2 bg-white text-5xl clr-dark" />
+              <Link href="https://github.com/tdora28/" className="btn-social indent">
+                <FaGithub />
                 <span className="w-full px-4 text-center">GitHub</span>
               </Link>
             </div>
