@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 :root {
+  /* COLORS */
   --bg-color: #2a1f39;
   --side-color: #5d5369;
+
+  /* LAYOUT */
+  --nav-height: 5rem;
 }
 /* If I want to implement light/dark mode: @media (prefers-color-scheme: dark) {} */
 
@@ -21,8 +25,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  /* 5rem to give space to the sticky nav */
-  padding-top: 5rem;
+  /* Give space to the sticky nav */
+  padding-top: var(--nav-height);
   background-color: var(--bg-color);
   color: white;
 }
@@ -110,6 +114,10 @@ p {
 }
 .container-wide {
   max-width: 1500px;
+}
+
+.scroll-top {
+  scroll-margin-top: calc(var(--nav-height) + 1.5rem);
 }
 
 .clr-dark {

@@ -7,15 +7,24 @@ const AboutPage = () => {
   return (
     <>
       <main className="container">
-        <h2 className={`${fontDisplay} text-5xl sm:text-6xl py-20`}>Nice to meet you!</h2>
+        <ul className="flex flex-col sm:flex-row sm:justify-between gap-5 sm:max-w-max text-center my-10 py-2 uppercase">
+          <li>
+            <Link href="#skills" className="bg-side px-5 py-2 indent block">
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link href="#experience" className="bg-side px-5 py-2 indent block">
+              Experience
+            </Link>
+          </li>
+          <li>
+            <Link href="#resume" className="bg-side px-5 py-2 indent block">
+              Resume
+            </Link>
+          </li>
+        </ul>
         <section>
-          {/* Resume */}
-          <div className="side-decor">
-            <h3 className={`${fontDisplay} text-3xl pb-5`}>Resume</h3>
-            <a href="/cv-dora-tokai.pdf" download="cv-dora-tokai.pdf" className={`${fontDisplay} inline-block btn bg-frame indent`}>
-              Download CV
-            </a>
-          </div>
           {/* About Me */}
           <div className="side-decor">
             <h3 className={`${fontDisplay} text-3xl pb-5`}>About Me</h3>
@@ -33,8 +42,9 @@ const AboutPage = () => {
               for collaboration or inquiries.
             </p>
           </div>
+
           {/* Skills */}
-          <div className="side-decor">
+          <div id="skills" className="side-decor scroll-top">
             <h3 className={`${fontDisplay} text-3xl pb-5`}>Skills</h3>
             <p className="flex flex-col">
               <span>Frontend:</span>
@@ -45,8 +55,9 @@ const AboutPage = () => {
               <span>Node.js, Express, Firebase, MongoDB, MySQL, RESTful APIs</span>
             </p>
           </div>
+
           {/* Experience */}
-          <div className="side-decor">
+          <div id="experience" className="side-decor scroll-top">
             <h3 className={`${fontDisplay} text-3xl pb-5`}>Experience</h3>
             <p className="flex flex-col">
               <span>2023 - communications intern</span>
@@ -66,6 +77,14 @@ const AboutPage = () => {
                 </Link>
               </span>
             </p>
+          </div>
+
+          {/* Resume */}
+          <div id="resume" className="side-decor scroll-top">
+            <h3 className={`${fontDisplay} text-3xl pb-5`}>Resume</h3>
+            <a href="/cv-dora-tokai.pdf" download="cv-dora-tokai.pdf" className={`${fontDisplay} inline-block btn bg-frame indent`}>
+              Download CV
+            </a>
           </div>
         </section>
       </main>
