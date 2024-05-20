@@ -1,25 +1,39 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { fontDisplay } from '@/utilities/font';
 import Link from 'next/link';
-import { VscColorMode } from 'react-icons/vsc';
+import { VscColorMode, VscChromeClose, VscMenu } from 'react-icons/vsc';
 import Socials from './Socials';
 import { usePathname } from 'next/navigation';
-import { FaAlignRight } from 'react-icons/fa';
 
 const Header = () => {
   const path = usePathname();
-
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (navRef.current && !navRef.current.contains(event.target as Node)) {
+      setIsMobileNavOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   const setMobileNavClass = () => {
     if (isMobileNavOpen) {
-      return 'sm:hidden absolute top-[100%] right-0 p-10 bg-white text-black';
+      return 'sm:hidden absolute top-[100%] right-[2rem] px-10 py-7 bg-white text-black rounded-md';
     } else {
       return 'hidden';
     }
@@ -62,11 +76,9 @@ const Header = () => {
         {/* Color mode toggle */}
         <VscColorMode className="text-2xl" />
         {/* Mobile menu */}
-        <button onClick={toggleMobileNav}>
-          <FaAlignRight className={path === '/' ? 'hidden' : 'sm:hidden text-2xl'} />
-        </button>
-        <nav className={path === '/' ? 'hidden' : setMobileNavClass()}>
-          <ul className="flex flex-col gap-4 text-right uppercase">
+        <button onClick={toggleMobileNav}>{isMobileNavOpen ? <VscChromeClose className={path === '/' ? 'hidden' : 'sm:hidden text-2xl'} /> : <VscMenu className={path === '/' ? 'hidden' : 'sm:hidden text-2xl'} />}</button>
+        <nav ref={navRef} className={path === '/' ? 'hidden' : setMobileNavClass()}>
+          <ul className="flex flex-col gap-4 text-center uppercase">
             <li>
               <Link href="/" className={path === '/' ? 'nav-link-active' : ''} onClick={toggleMobileNav}>
                 Home
