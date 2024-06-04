@@ -28,10 +28,10 @@ const AboutPage = () => {
           {/* About Me */}
           <div className="side-decor">
             <h3 className={`${fontDisplay} text-3xl pb-5`}>About Me</h3>
-            <p>I'm Dora Tokai: full-stack web developer based in Espoo, Finland that has a passion both for programming and human languages, enjoys problem solving, learning, and tinkering.</p>
+            <p>I&apos;m Dora Tokai: full-stack web developer based in Espoo, Finland that has a passion both for programming and human languages, enjoys problem solving, learning, and tinkering.</p>
             <p>
-              I aim to create work that is not only smart and simple but also distinct and powerful. Whether it's implementing UI design, optimizing backend, or technical problem-solving, I'm dedicated to providing impactful solutions. I prioritize a
-              user-first approach, tailoring my work to meet specific project needs. Thank you for exploring my{' '}
+              I aim to create work that is not only smart and simple but also distinct and powerful. Whether it&apos;s implementing UI design, optimizing backend, or technical problem-solving, I&apos;m dedicated to providing impactful solutions. I
+              prioritize a user-first approach, tailoring my work to meet specific project needs. Thank you for exploring my{' '}
               <Link href="/projects" className={`${fontDisplay} text-link`}>
                 projects
               </Link>
