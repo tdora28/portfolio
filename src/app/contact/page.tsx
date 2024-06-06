@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { fontDisplay } from '@/utilities/font';
 import Link from 'next/link';
 import DecorText from '@/components/DecorText';
@@ -9,13 +9,47 @@ import FloatingLabelInput from '@/components/FloatingLabelInput';
 import { handleAccordion } from '@/utilities/helper';
 
 const ContactPage = () => {
+  const [status, setStatus] = useState<null | string>(null);
+  const [error, setError] = useState<null | string>(null);
+
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    try {
+      setStatus('pending');
+      setError(null);
+      const myForm = event.currentTarget as HTMLFormElement;
+      const formData = new FormData(myForm);
+      // Convert FormData to a format that URLSearchParams accepts
+      const formEntries = Array.from(formData.entries()).reduce((acc, [key, value]) => {
+        acc[key] = value as string; // Assume all form values are strings for simplicity
+        return acc;
+      }, {} as Record<string, string>);
+      // Construct the URLSearchParams from the form entries
+      const urlSearchParams = new URLSearchParams(formEntries);
+      const res = await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: urlSearchParams.toString(),
+      });
+      if (res.status === 200) {
+        setStatus('ok');
+      } else {
+        setStatus('error');
+        setError(`${res.status} ${res.statusText}`);
+      }
+    } catch (e) {
+      setStatus('error');
+      setError(`${e}`);
+    }
+  };
+
   return (
     <>
       <main className="container pb-10">
         <h2 className={`${fontDisplay} text-5xl sm:text-6xl py-20`}>Contact</h2>
         <section className="grid md:grid-cols-[2fr_1fr] gap-20 md:gap-10 md:justify-between">
           {/* Contact Form */}
-          <form name="contact" method="POST" className="flex flex-col gap-5">
+          <form name="contact" onSubmit={handleFormSubmit} className="flex flex-col gap-5">
             <input type="hidden" name="form-name" value="contact" />
 
             <h3 className={`${fontDisplay} text-3xl`}>Send a message</h3>
@@ -30,6 +64,9 @@ const ContactPage = () => {
             <button type="submit" className={`${fontDisplay} btn max-w-28 bg-frame indent`}>
               Send
             </button>
+
+            {status === 'ok' && <div className="alert alert-success">Submitted!</div>}
+            {status === 'error' && <div className="alert alert-error">{error}</div>}
           </form>
 
           {/* Socials */}
