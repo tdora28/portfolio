@@ -15,7 +15,9 @@ const ContactPage = () => {
         <h2 className={`${fontDisplay} text-5xl sm:text-6xl py-20`}>Contact</h2>
         <section className="grid md:grid-cols-[2fr_1fr] gap-20 md:gap-10 md:justify-between">
           {/* Contact Form */}
-          <form action="" className="flex flex-col gap-5">
+          <form name="contact" data-netlify="true" action="POST" className="flex flex-col gap-5">
+            <input type="hidden" name="form-name" value="contact" />
+
             <h3 className={`${fontDisplay} text-3xl`}>Send a message</h3>
 
             {/* Name input */}
