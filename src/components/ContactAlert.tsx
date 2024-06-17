@@ -11,26 +11,26 @@ type ContactAlertProps = {
 const ContactAlert: React.FC<ContactAlertProps> = ({ status, errorMessage, onClick }) => {
   const alerts = {
     ok: {
-      color: 'purple',
+      classes: 'flex justify-between items-center bg-purple-100 border border-purple-400 text-purple-700 px-4 py-3 relative',
       title: 'Success!',
       message: 'Your message has been sent.',
     },
     error: {
-      color: 'red',
+      classes: 'flex justify-between items-center bg-red-100 border border-red-400 text-red-700 px-4 py-3 relative',
       title: 'Error!',
       message: errorMessage,
     },
     pending: {
-      color: 'yellow',
+      classes: 'flex justify-between items-center bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 relative',
       title: 'Sending...',
       message: 'Your message is being sent.',
     },
   };
 
-  const { color, title, message } = alerts[status];
+  const { classes, title, message } = alerts[status];
 
   return (
-    <div className={`flex justify-between items-center bg-${color}-100 border border-${color}-400 text-${color}-700 px-4 py-3 relative`} role="alert">
+    <div className={classes} role="alert">
       <div>
         <strong className="font-bold">{title}</strong>
         <span className="block sm:inline"> {message}</span>
