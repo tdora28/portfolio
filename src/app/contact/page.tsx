@@ -5,6 +5,7 @@ import { fontDisplay } from '@/utilities/font';
 import Link from 'next/link';
 import DecorText from '@/components/DecorText';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { VscChromeClose } from 'react-icons/vsc';
 import FloatingLabelInput from '@/components/FloatingLabelInput';
 import { handleAccordion } from '@/utilities/helper';
 
@@ -43,6 +44,11 @@ const ContactPage = () => {
     }
   };
 
+  const handleAlertClose = () => {
+    setStatus(null);
+    setError(null);
+  };
+
   return (
     <>
       <main className="container pb-10">
@@ -65,16 +71,28 @@ const ContactPage = () => {
               Send
             </button>
 
+            {status === 'pending' && (
+              <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded relative" role="alert">
+                <strong className="font-bold">Sending...</strong>
+                <span className="block sm:inline"> Your message is being sent.</span>
+              </div>
+            )}
             {status === 'ok' && (
               <div className="bg-purple-100 border border-purple-400 text-purple-700 px-4 py-3 rounded relative" role="alert">
                 <strong className="font-bold">Success!</strong>
-                <span className="block sm:inline">Your message has been sent.</span>
+                <span className="block sm:inline"> Your message has been sent.</span>
+                <button onClick={handleAlertClose}>
+                  <VscChromeClose />
+                </button>
               </div>
             )}
             {status === 'error' && (
               <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
                 <strong className="font-bold">Error!</strong>
-                <span className="block sm:inline">Something seriously bad happened.</span>
+                <span className="block sm:inline"> {error}</span>
+                <button onClick={handleAlertClose}>
+                  <VscChromeClose />
+                </button>
               </div>
             )}
           </form>
